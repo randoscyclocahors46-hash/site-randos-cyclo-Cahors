@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Les photos du club — AOC Cahors">
+  <title>Photos | AOC Cahors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <img class="logo" src="images/logo.png" alt="Logo AOC Cahors" onerror="this.style.display='none'">
+      <div class="brand"><h1>AOC Cahors</h1><p>Marcher, pédaler, partager</p></div>
+    </div>
+  </header>
+  <nav aria-label="Navigation principale"><div class="nav-inner"><a href="index.html">Accueil</a>
+<a href="photos.html" class="active" aria-current="page">Photos</a>
+<a href="planning.html">Planning</a>
+<a href="festivites.html">Festivités</a>
+<a href="cyclo.html">Cyclo</a>
+<a href="adhesions.html">Adhésions</a></div></nav>
+  
+  <main>
+    <div class="page-heading">
+      <span class="eyebrow">Nos souvenirs</span>
+      <h2>Les photos du club AOC Cahors</h2>
+      <p>Randonnées, sorties et moments de convivialité partagés ensemble !</p>
+    </div>
+
+    <section class="card">
+      <h3>Les moments de notre club</h3>
+
+      <div class="galerie-photos">
+        <figure>
+          <img src="images/randonnee-01.jpg" alt="Photo de randonnée du club">
+          <figcaption>Nos randonnées</figcaption>
+        </figure>
+      </div>
+    </section>
+<div class="page-heading"><span class="eyebrow">Photos</span><h2>Les photos du club</h2><p>Des souvenirs de randonnées, de sorties cyclo et de moments partagés.</p></div>
+<section class="grid">
+  <article class="card"><div class="photo-placeholder">📷<br>Ajouter une photo de randonnée</div><h3>Randonnées</h3><p>Place tes photos dans le dossier <code>photos</code>, puis remplace cet emplacement par l'image correspondante.</p></article>
+  <article class="card"><div class="photo-placeholder">🌄<br>Ajouter une photo de paysage</div><h3>Nos paysages</h3><p>Les chemins, les villages et les beaux paysages découverts pendant nos sorties.</p></article>
+  <article class="card"><div class="photo-placeholder">🥳<br>Ajouter une photo de groupe</div><h3>Vie du club</h3><p>Les rencontres, les repas et les souvenirs de nos festivités.</p></article>
+</section>
+<div class="note"><strong>Pour ajouter une photo :</strong> dépose le fichier image dans le dossier <code>photos</code>. On pourra ensuite remplacer chaque bloc de démonstration par tes photos réelles.</div>
+</main>
+  <footer><p><strong>AOC Cahors</strong> · Le plaisir de se retrouver</p><small>Site du club — informations à personnaliser avant publication</small></footer>
+  <div style="text-align:center; margin:20px;">
+    <button id="bouton-musique" type="button"
+      style="background:#702b3b; color:white; border:0; padding:12px 20px; border-radius:8px; cursor:pointer;">
+      🎵 Activer la musique
+    </button>
+    <audio id="musique-ambiance" loop preload="none">
+      <source src="musique/ambiance.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const musique = document.getElementById('musique-ambiance');
+    const bouton = document.getElementById('bouton-musique');
+
+    bouton.addEventListener('click', async function () {
+      if (musique.paused) {
+        try {
+          await musique.play();
+          bouton.textContent = '🔇 Couper la musique';
+        } catch (erreur) {
+          bouton.textContent = 'Réessayer la musique';
+        }
+      } else {
+        musique.pause();
+        bouton.textContent = '🎵 Activer la musique';
+      }
+    });
+  </script>
+</body>
+</html>

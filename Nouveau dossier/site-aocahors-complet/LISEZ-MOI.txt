@@ -1,0 +1,26 @@
+SITE AOC CAHORS — GUIDE DE DÉMARRAGE
+
+Fichiers inclus :
+- index.html : accueil
+- photos.html : albums photos (emplacements de démonstration)
+- planning.html : liens vers les documents Word/PDF
+- festivites.html : repas et événements
+- cyclo.html : section cyclo
+- adhesions.html : informations d'adhésion
+- style.css : couleurs et présentation communes
+- images/ : place ici ton logo sous le nom logo.png
+- photos/ : place ici les photos du club
+- documents/ : place ici les documents Word et PDF
+
+POUR UTILISER LE SITE
+1. Décompresse le ZIP dans ton dossier de travail.
+2. Si tu as déjà un dossier site-aocahors avec ton logo, copie les fichiers HTML et style.css dedans et garde ton dossier images/logo.png.
+3. Ouvre index.html dans ton navigateur pour tester le site.
+4. Les liens de documents sont des exemples : ils ne fonctionneront que lorsque tu auras ajouté les fichiers correspondants dans documents/.
+5. Les liens vers les fichiers doivent reprendre exactement le nom du fichier. Exemple :
+   documents/planning-semaine.pdf
+6. Pour publier le site sur Internet, il faudra transférer tous les fichiers et dossiers en conservant leur organisation.
+
+IMPORTANT
+- Les coordonnées, tarifs, dates et informations d'adhésion ne sont pas inventés : complète-les avec les informations officielles du club.
+- Cette version est un site statique : les documents sont consultables après leur mise en ligne, mais il n'y a pas d'espace privé ni de formulaire d'envoi.

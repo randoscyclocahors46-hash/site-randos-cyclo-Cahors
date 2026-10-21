@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Planning des randonnées — AOC Cahors">
+  <title>Planning | AOC Cahors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <img class="logo" src="images/logo.png" alt="Logo AOC Cahors" onerror="this.style.display='none'">
+      <div class="brand">
+        <h1>AOC Cahors</h1>
+        <p>Marcher, pédaler, partager</p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html">Accueil</a>
+      <a href="photos.html">Photos</a>
+      <a href="planning.html" class="active" aria-current="page">Planning</a>
+      <a href="festivites.html">Festivités</a>
+      <a href="cyclo.html">Cyclo</a>
+      <a href="adhesions.html">Adhésions</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-heading">
+      <span class="eyebrow">À vos chaussures !</span>
+      <h2>Le planning des randonnées</h2>
+      <p>Retrouvons-nous sur les chemins dans la bonne humeur et la convivialité !</p>
+    </div>
+
+    <section class="card">
+      <span class="pill">Cette semaine</span>
+     <h3>Notre programme de randonnée</h3>
+
+<label for="choix-semaine"><strong>Choisir une semaine :</strong></label>
+<select id="choix-semaine" onchange="document.getElementById('lien-planning').href=this.value;">
+  <option value="documents/planning-semaine.pdf">Planning disponible</option>
+  <option value="documents/planning-semaine-42.pdf" disabled>Semaine 42 — à venir</option>
+  <option value="documents/planning-semaine-43.pdf" disabled>Semaine 43 — à venir</option>
+  <option value="documents/planning-semaine-44.pdf" disabled>Semaine 44 — à venir</option>
+</select>
+
+<p>Sélectionne une semaine, puis clique sur le bouton pour ouvrir son planning.</p>
+
+      <div class="doc-row">
+        <span class="doc-icon">📄</span>
+        <div class="doc-info">
+          <strong>Planning hebdomadaire</strong>
+          <small>Document PDF</small>
+        </div>
+        <a class="button" id="lien-planning" href="documents/planning-semaine.pdf" target="_blank" rel="noopener">Ouvrir 
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:20px">
+      <span class="pill">Bientôt disponible</span>
+      <h3>Les prochaines semaines</h3>
+      <p>Les plannings des prochaines semaines seront ajoutés ici au fur et à mesure.</p>
+    </section>
+
+    <div class="note">
+      <strong>Information pratique :</strong>
+      pour ajouter un nouveau planning, copie le PDF dans le dossiers
+      <code>documents</code>. Nous ajouterons ensuite son bouton sur cette page.
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>AOC Cahors</strong> · Le plaisir de se retrouver</p>
+    <small>Site du club</small>
+  </footer>
+</body>
+</html>
