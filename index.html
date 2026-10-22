@@ -62,7 +62,17 @@
       }
     });
   </script>
-  
+ <script>
+fetch('/content/accueil.json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('titre-site').textContent = data.titre;
+    document.getElementById('slogan-site').textContent = data.slogan;
+    document.getElementById('titre-accueil').textContent = data.titre_accueil;
+    document.getElementById('texte-accueil').textContent = data.texte_accueil;
+  })
+  .catch(erreur => console.log('Chargement du contenu impossible', erreur));
+</script> 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
