@@ -32,3 +32,23 @@ collections:
           - label: "Texte d'accueil"
             name: "texte_accueil"
             widget: "text"
+
+      - name: "planning"
+        label: "Plannings et PDF"
+        file: "content/planning.json"
+        format: "json"
+        fields:
+          - label: "Titre du planning"
+            name: "titre"
+            widget: "string"
+          - label: "Document PDF"
+            name: "pdf"
+            widget: "file"
+            media_folder: "/documents"
+            public_folder: "/documents"
+            allow_multiple: false
+            required: false
+            media_library:
+              config:
+                multiple: false
+                max_file_size: 10000000
