@@ -77,5 +77,18 @@
     <p><strong>AOC Cahors</strong> · Le plaisir de se retrouver</p>
     <small>Site du club</small>
   </footer>
+
+<script>
+fetch('/content/planning.json')
+  .then(response => response.json())
+  .then(data => {
+    const lien = document.getElementById('lien-planning');
+    if (lien && data.pdf) {
+      lien.href = data.pdf;
+    }
+  })
+  .catch(erreur => console.log('Chargement du planning impossible', erreur));
+</script>
+
 </body>
 </html>
