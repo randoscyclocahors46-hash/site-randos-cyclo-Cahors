@@ -38,7 +38,7 @@
 
     <section class="card">
       <span class="pill">Cette semaine</span>
-     <h3>Notre programme de randonnée</h3>
+     <h3 id="titre-planning">Notre programme de randonnée</h3>
 
 <label for="choix-semaine"><strong>Choisir une semaine :</strong></label>
 <select id="choix-semaine" onchange="document.getElementById('lien-planning').href=this.value;">
@@ -83,9 +83,15 @@ fetch('/content/planning.json')
   .then(response => response.json())
   .then(data => {
     const lien = document.getElementById('lien-planning');
-    if (lien && data.pdf) {
-      lien.href = data.pdf;
-    }
+    
+if (lien && data.pdf) {
+  lien.href = data.pdf;
+}
+const titre = document.getElementById('titre-planning');
+if (titre && data.titre) {
+  titre.textContent = data.titre;
+}
+
   })
   .catch(erreur => console.log('Chargement du planning impossible', erreur));
 </script>
