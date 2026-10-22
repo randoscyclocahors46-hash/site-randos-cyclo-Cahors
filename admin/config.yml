@@ -1,12 +1,11 @@
 backend:
   name: git-gateway
+  site_url: https://elegant-sorbet-0a6bf5.netlify.app
+display_url: https://elegant-sorbet-0a6bf5.netlify.app
   branch: main
-
 media_folder: "images"
 public_folder: "/images"
-
 locale: "fr"
-
 collections:
   - name: "pages"
     label: "Pages du site"
